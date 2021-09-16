@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Notes Manager</string>
+    <string name="note_list_title">Note List</string>
+    <string name="new_note">Новая заметка</string>
+    <string name="id">id</string>
+</resources>

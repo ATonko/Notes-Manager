@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_200">#f1f3f4</color>
+    <color name="primary_500">#afb1b2</color>
+    <color name="primary_700">#707272</color>
+    <color name="complimentary_200">#fedf84</color>
+    <color name="complimentary_700">#fc9e12</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
