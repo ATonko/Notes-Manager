@@ -11,8 +11,8 @@ data class NoteRoomEntity(
     val id: String,
     var title: String,
     var content: String = EMPTY_STRING
-){
-    internal companion object{
-        const val TABLE_NAME="notes"
+) {
+    internal companion object {
+        const val TABLE_NAME = "notes"
     }
 }

@@ -24,7 +24,6 @@ internal class NoteListPresenter @Inject constructor(
         compositeDisposable += interactor.getList()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            //TODO: Многопоточность с помощью compose
             .subscribe({
                 noteList = it
                 view?.setNoteList(it)
@@ -38,13 +37,12 @@ internal class NoteListPresenter @Inject constructor(
     }
 
     override fun onNoteItemLongClick(noteItem: NoteItem) {
-        //TODO: Многопоточность
         compositeDisposable += interactor.deleteNote(noteItem)
             .andThen(interactor.getList())
             .subscribe({
                 view?.updateNoteList(it)
             }, {
-                //TODO: Обработка ошибок
+
             })
     }
 

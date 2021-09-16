@@ -73,11 +73,6 @@ internal class NoteEditingFragment : Fragment(R.layout.fragment_note_editing), I
         activity?.replaceFragment(NotesListFragment.newInstance())
     }
 
-    override fun goBackToNoteList() {
-        //TODO Додумать логику возврата к списку - что делать если заметка не изменилась? а если изменилась??
-//        activity?.popBackStackOrFinish()
-    }
-
     override fun onBackPressed() {
         presenter.onBackPressed(etNoteEdit.text.toString())
     }

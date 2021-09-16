@@ -12,6 +12,4 @@ internal interface INoteEditingView : IView {
 
     fun goToNoteList()
 
-    fun goBackToNoteList()
-
 }
