@@ -9,6 +9,11 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+
+    dexOptions {
+        incremental true
+    }
+
     defaultConfig {
         multiDexEnabled true
         applicationId "com.example.notesmanager"
