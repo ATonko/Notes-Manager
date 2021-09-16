@@ -36,14 +36,7 @@ internal class NoteEditingPresenter @Inject constructor(
     }
 
     override fun onBackPressed(noteContentToSave:String) {
-        noteItem?.content = noteContentToSave
-        compositeDisposable += interactor.saveNote(noteItem)
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .doAfterTerminate { view?.clearEditNoteFieldFocus() }
-            .subscribe({
-                view?.goToNoteList()
-            }, ::handleError)
+        view?.goToNoteList()
     }
 
     private fun handleError(throwable: Throwable) {
